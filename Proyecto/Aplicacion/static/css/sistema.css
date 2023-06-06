@@ -347,6 +347,7 @@ margin-top: 15px;
 .comuna:hover i {
     background-color: #3E3E3E;
     color: white;
+    transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 
 

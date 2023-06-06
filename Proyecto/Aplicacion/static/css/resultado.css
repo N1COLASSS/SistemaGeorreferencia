@@ -3,13 +3,13 @@
     border-radius: 9px;
     padding: 20px 16px;
     width: 1280px;
-    height: 280px;
+    height: auto;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   }
   .detalle{
     width: 1248px;
-    height: 240px;
+    height: auto;
   }
   .detalle-titulo {
     display: flex;
@@ -48,6 +48,9 @@
     width: 29px;
     height: 30px;
     background: #3E3E3E;
+  }
+  .boton-cerrar:hover{
+    background-color: #00B0CA;
   }
   
   .boton-cerrar i {
@@ -138,9 +141,18 @@
   width: 158.57px;
   height: 30px;
   border-radius: 8px;
-  background: #7C7C7C;
   transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 
+}
+
+.casilla-con-datos .casilla-fondo{
+  /* Estilos para las casillas con datos */
+  background: #7C7C7C;
+}
+
+.casilla-sin-datos .casilla-fondo{
+  /* Estilos para las casillas sin datos */
+  background: #B0B0B0;
 }
 
 .casilla-titulo{
@@ -185,5 +197,120 @@
 #casilla7:hover .casilla-fondo {
   background-color: #40ABC2;
 }
+/* Casilla seleccionada */
+#casilla1.casilla-seleccionada .casilla-fondo {
+  background-color: #E03030; /* Fondo para Casilla Catastro */
+}
+
+#casilla2.casilla-seleccionada .casilla-fondo {
+  background-color: #5675DF; /* Fondo para Casilla CBR */
+}
+
+#casilla3.casilla-seleccionada .casilla-fondo {
+  background-color: #1E9731; /* Fondo para Casilla AP Y PE*/
+}
+#casilla4.casilla-seleccionada .casilla-fondo {
+  background-color: #9747FF; /* Fondo para Casilla Strip y Power Center */
+}
+#casilla5.casilla-seleccionada .casilla-fondo {
+  background-color: #F423C6; /* Fondo para Casilla Multifamily */
+}
+#casilla6.casilla-seleccionada .casilla-fondo {
+  background-color: #FC9A27; /* Fondo para Casilla Administrado por MQ */
+}
+#casilla7.casilla-seleccionada .casilla-fondo {
+  background-color: #40ABC2; /* Fondo para Casilla Proyectos MQ*/
+}
 
 
+
+
+/* Diseño tabla */
+
+#detalle-tabla{
+  padding-top: 15px;
+}
+
+.table th{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+
+  color: #FFFFFF;
+}
+
+.table td{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+
+  color: #3E3E3E;
+}
+
+/* Tamaño de filas */
+thead th:nth-child(1) {
+  width: 10px;
+  background-color: #FFFFFF;
+}
+thead th:nth-child(2) {
+  width: 400px;
+}
+
+thead th:nth-child(3) {
+ width: 200px;
+}
+
+thead th:nth-child(4) {
+  width: 90px;
+}
+
+thead th:nth-child(5) {
+  width: 90px;
+}
+thead th:nth-child(6) {
+  width: 120px;
+}
+thead th:nth-child(7) {
+  width: 135px;
+}
+thead th:nth-child(8) {
+  width: 173px;
+}
+
+/* Personalizar boton exportar */
+.miBotonExportar{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.miBotonExportar button:hover{
+  background-color: #00B0CA;
+}
+
+.miBotonExportar button{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  border: none;
+
+  background-color: #3E3E3E;
+
+
+  width: 100%;
+  color: #FFFFFF;
+
+  height: 31px;
+}
