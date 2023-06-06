@@ -1,0 +1,189 @@
+.resultado {
+    margin: 40px auto; /* Centrar horizontalmente */
+    border-radius: 9px;
+    padding: 20px 16px;
+    width: 1280px;
+    height: 280px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+  .detalle{
+    width: 1248px;
+    height: 240px;
+  }
+  .detalle-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Añadido */
+    padding: 0px;
+    height: auto;
+  }
+
+  /* Diseño y ajuste inicio de detalle titulo*/
+  .inicio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inicio i{
+    font-size: 29px;
+    color: #3E3E3E;
+  }
+  .inicio span{
+    font-family: 'Integra', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    letter-spacing: -1px;
+    padding-left: 9px;
+    color: #3E3E3E;
+  }
+  
+  /* Diseño y ajuste final de detalle titulo */
+  .boton-cerrar {
+    align-items: center;
+    padding: 0px 10px;
+    width: 29px;
+    height: 30px;
+    background: #3E3E3E;
+  }
+  
+  .boton-cerrar i {
+    font-weight: 700;
+
+    line-height: 29px;
+    font-size: 12px;
+    color: #FFFFFF;
+  }
+  
+  /* Diseño y ajuste boton anterior */
+
+  .boton-anterior{
+    align-items: center;
+    padding: 0px 10px;
+    width: 29px;
+    height: 30px;
+    background: #3E3E3E;
+    border-radius: 9px;
+  }
+
+  .boton-anterior i{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 29px;
+
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #FFFFFF;
+  }
+
+  .boton-anterior:hover{
+    background: #00B0CA;
+  }
+
+  /* Diseño y ajuste boton anterior */
+
+  .boton-siguiente{
+    align-items: center;
+    padding: 0px 10px;
+    width: 29px;
+    height: 30px;
+    background: #3E3E3E;
+    border-radius: 9px;
+  }
+
+  .boton-siguiente i{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 29px;
+  
+    text-align: center;
+    letter-spacing: -0.02em;
+  
+    color: #FFFFFF;
+  }
+
+  .boton-siguiente:hover{
+    background: #00B0CA;
+  }
+
+  /* Diseño casillas */
+
+.detalle-casilla{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+
+  width: 100%;
+  height: auto;
+}
+.casilla{
+  align-items: center;
+  padding: 0px;
+
+  width: 158.57px;
+  height: 30px;
+}
+
+.casilla-fondo{
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  display: flex;
+  width: 158.57px;
+  height: 30px;
+  border-radius: 8px;
+  background: #7C7C7C;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
+
+}
+
+.casilla-titulo{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #FFFFFF;
+}
+
+/* Diseño de hover para cada casilla */
+
+#casilla1:hover .casilla-fondo {
+  background-color: #E03030;
+}
+
+#casilla2:hover .casilla-fondo {
+  background-color: #5675DF;
+}
+
+#casilla3:hover .casilla-fondo {
+  background-color: #1E9731;
+}
+
+#casilla4:hover .casilla-fondo {
+  background-color: #9747FF;
+}
+
+#casilla5:hover .casilla-fondo {
+  background-color: #F423C6;
+}
+
+#casilla6:hover .casilla-fondo {
+  background-color: #FC9A27;
+}
+
+#casilla7:hover .casilla-fondo {
+  background-color: #40ABC2;
+}
+
+
