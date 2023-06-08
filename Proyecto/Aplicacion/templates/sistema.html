@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -120,7 +119,7 @@
                                         </div>
                                     </div>
                                     <div class="miBoton mt-3">
-                                        <button  type="button">Aplicar Filtro</button>
+                                        <button id="aplicar-filtro" type="button">Aplicar Filtro</button>
                                         <button  type="button">Borrar Filtro</button>
                                     </div>
                                 </div>
@@ -200,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="miBoton mt-3">
-                                        <button  type="button">Aplicar Filtro</button>
+                                        <button id="aplicar-filtro" type="button">Aplicar Filtro</button>
                                         <button  type="button">Borrar Filtro</button>
                                     </div>
                                 </div>                         
@@ -280,7 +279,7 @@
                                         </div>
                                     </div>
                                     <div class="miBoton mt-3">
-                                        <button  type="button">Aplicar Filtro</button>
+                                        <button id="aplicar-filtro" type="button">Aplicar Filtro</button>
                                         <button  type="button">Borrar Filtro</button>
                                     </div>
                                 </div>                    
@@ -360,7 +359,7 @@
                                         </div>
                                     </div>
                                     <div class="miBoton mt-3">
-                                        <button  type="button">Aplicar Filtro</button>
+                                        <button id="aplicar-filtro" type="button">Aplicar Filtro</button>
                                         <button  type="button">Borrar Filtro</button>
                                     </div>
                                 </div>   
@@ -440,7 +439,7 @@
                                         </div>
                                     </div>
                                     <div class="miBoton mt-3">
-                                        <button  type="button">Aplicar Filtro</button>
+                                        <button id="aplicar-filtro" type="button">Aplicar Filtro</button>
                                         <button  type="button">Borrar Filtro</button>
                                     </div>
                                 </div>  
@@ -520,7 +519,7 @@
                                         </div>
                                     </div>
                                     <div class="miBoton mt-3">
-                                        <button  type="button">Aplicar Filtro</button>
+                                        <button id="aplicar-filtro" type="button">Aplicar Filtro</button>
                                         <button  type="button">Borrar Filtro</button>
                                     </div>
                                 </div>                           
@@ -600,7 +599,7 @@
                                         </div>
                                     </div>
                                     <div class="miBoton mt-3">
-                                        <button  type="button">Aplicar Filtro</button>
+                                        <button id="aplicar-filtro" type="button">Aplicar Filtro</button>
                                         <button  type="button">Borrar Filtro</button>
                                     </div>
                                 </div>                                
@@ -613,8 +612,97 @@
                 <img src="{% static 'img/mapa.png' %}" alt="mapaUbicacion">
             </div>
         </div>
+        <div  class="resultado" >
+            <div class="detalle">
+        
+              <!-- Header de detalle  -->
+              <div class="detalle-titulo">
+                <div class="inicio">
+                  <i class="fa-solid fa-magnifying-glass-location"></i>
+                  <span>Resultados Encontrados:</span>
+                </div>
+                <div class="boton-cerrar">
+                  <i class="fa-sharp fa-x"></i>
+                </div>
+              </div>
+              
+              <!-- -------------------------  -->
+              <hr style="border: solid #3E3E3E; opacity: 0.9; border-width: thin;">
+        
+              <!-- Casilla -->
+              <div class="detalle-casilla" >
+                <div class="boton-anterior" id="boton-anterior">
+                  <i class="fa-solid fa-light fa-chevron-left"></i>
+                </div>
+        
+                <!-- Casilla Catastro -->
+                <div class="casilla" id="casilla1" onclick="mostrarDatosCasilla(1)">
+                  <div class="casilla-fondo">
+                    <span class="casilla-titulo">Catastro</span>
+                  </div>
+                </div>
+        
+                <!-- Casilla CBR -->
+                <div class="casilla" id="casilla2" onclick="mostrarDatosCasilla(2)">
+                  <div class="casilla-fondo">
+                    <span class="casilla-titulo">CBR</span>
+                  </div>
+                </div>
+        
+                <!-- Casilla AP Y PE -->
+                <div class="casilla" id="casilla3" onclick="mostrarDatosCasilla(3)">
+                  <div class="casilla-fondo">
+                    <span class="casilla-titulo">AP Y PE</span>
+                  </div>
+                </div>
+        
+                <!-- Casilla Strip y Power Center -->
+                <div class="casilla" id="casilla4" onclick="mostrarDatosCasilla(4)">
+                  <div class="casilla-fondo">
+                    <span class="casilla-titulo">Strip y Power Center</span>
+                  </div>
+                </div>
+        
+                <!-- Casilla Multifamily -->
+                <div class="casilla" id="casilla5" onclick="mostrarDatosCasilla(5)">
+                  <div class="casilla-fondo">
+                    <span class="casilla-titulo">Multifamily</span>
+                  </div>
+                </div>
+        
+                <!-- Casilla Administrado por MQ -->
+                <div class="casilla" id="casilla6" onclick="mostrarDatosCasilla(6)">
+                  <div class="casilla-fondo">
+                    <span class="casilla-titulo">Administrado por MQ</span>
+                  </div>
+                </div>
+        
+                <!-- Casilla Proyectos MQ -->
+                <div class="casilla" id="casilla7" onclick="mostrarDatosCasilla(7)">
+                  <div class="casilla-fondo">
+                    <span class="casilla-titulo">Proyectos MQ</span>
+                  </div>
+                </div>
+        
+                <div class="boton-siguiente" id="boton-siguiente">
+                  <i class="fa-solid fa-regular fa-chevron-right"></i>
+                </div>
+        
+              </div>
+        
+              <!-- Tabla -->
+              <div id="detalle-tabla"></div>
+              
+              <!-- -------------------------  -->
+              <hr style="border: solid #3E3E3E; opacity: 0.9; border-width: thin;">
+        
+              <!-- Exporta informe a PDF -->
+              <div class="miBotonExportar">
+                <button  type="button">Exportar Informe en PDF</button>
+              </div>
+            </div>
+        </div> 
     </div>
-    
     <footer>
         <div class="centro align-items-center justify-content-center d-flex text-white p-3" >
             <div class="texto-footer">
@@ -635,10 +723,7 @@
         </div>
     </footer>
 
-    
-
-    <script src="{% static 'js/script.js' %}"></script>
-
+    <script src="{% static 'js/script.js' %}"></script>      
 
     <script src="https://kit.fontawesome.com/ba1c51d352.js" crossorigin="anonymous"></script>
 
