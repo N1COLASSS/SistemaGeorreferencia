@@ -24,7 +24,7 @@ from django.shortcuts import render
 
 urlpatterns = [
     path('', views.mi_sistema, name='mi_sistema'),  # Agrega esta línea
-    path('resultado', views.resultado, name='resultado'),
+    path('barra', views.barra, name='barra'),
     path('admin/', admin.site.urls),
 ]
 

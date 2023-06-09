@@ -1,148 +1,115 @@
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../fonts/Inter-Bold.ttf') format('truetype');
+    font-weight: 700,;
+  }
 body{
     margin: 0; /* Margen exterior */
     padding: 0; /* Relleno interno */
-    
-  
-  
+    font-family: 'Inter Bold' !important;
   }
 .informacion{
-
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
     padding: 0px;
     gap: 11px;
 
-    position: absolute;
-    width: 419px;
+    width: auto;
     height: 164.11px;
-    left: 68px;
-    top: 202px;
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .barra{
     display: flex;
-flex-direction: row;
-align-items: center;
 padding: 0px;
 gap: 10px;
+    background-color: #FFFFFF;
+    height: 52px;
 
-width: 510px;
-height: 54px;
-
-background: #FFFFFF;
 }
 .barra-info{
     display: flex;
     align-items: center;
+    padding: 0px 7px 0px 0px;
     gap: 10px;
-
-    width: auto;
-    height: auto;
 
 }
 .barra-titulos{
     display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: flex-start;
+align-items: start;
 padding: 0px;
-gap: 5px;
 
 width: auto;
 height: auto;
 }
 .info-titulo{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
     font-size: 18px;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
     letter-spacing: -0.02em;
-
     color: #3E3E3E;
 }
-.barra-subtitulo{
 
-width: auto;
-height: auto;
-}
 .info-subtitulo{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
     font-size: 14px;
-    line-height: 15px;
 
-    display: flex;
-    align-items: center;
     letter-spacing: -0.02em;
 
     color: #7C7C7C;
 }
 .info-botones{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0px;
-    gap: 10px;
-
-    width: auto;
+  align-items: center;
+  gap: 10px;
+  padding: 0px;
 }
 
 .miBtnVermas{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+gap: 10px;
     
 }
 .miBtnVermas button{
     padding: 0px;
-    gap: 10px;
 
     width: 93.25px;
     height: 39px;
     border: none;
 
     background: #E03030;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
     font-size: 12px;
     line-height: 15px;
 
-    text-align: center;
     letter-spacing: -0.02em;
 
     color: #FFFFFF;
 }
 
+
 .miBtnCerrar{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-}
-
-.miBtnCerrar button{
     padding: 0px 5px;
     gap: 10px;
+}
+.miBtnCerrar button{
+    padding: 0px 5px;
 
     width: 19px;
     height: 39px;
     border: none;
 
     background: #3E3E3E;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
     font-size: 12px;
     line-height: 15px;
 
-    text-align: center;
     letter-spacing: -0.02em;
 
     color: #FFFFFF;
