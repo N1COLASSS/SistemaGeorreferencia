@@ -286,7 +286,6 @@ body{
 .miSelect option[value=""][disabled]{
   display: none;
 }
-
 .miSelect option{
   appearance: none;
   background-color: #F0F0F0;
@@ -311,7 +310,6 @@ body{
 .miInputDoble::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
-
 .guion{
   float: right; 
   margin-left: 10.5px; 
@@ -632,6 +630,8 @@ thead th:nth-child(8) {
 /* Personalizar boton exportar */
 .miBotonExportar{
   display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-direction: column;
   align-items: center;
 }

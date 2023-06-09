@@ -7,7 +7,7 @@ body{
     margin: 0; /* Margen exterior */
     padding: 0; /* Relleno interno */
     font-family: 'Inter Bold' !important;
-  }
+}
 .informacion{
     display: flex;
 flex-direction: column;
@@ -48,16 +48,16 @@ width: auto;
 height: auto;
 }
 .info-titulo{
+
     font-size: 18px;
     letter-spacing: -0.02em;
     color: #3E3E3E;
 }
 
 .info-subtitulo{
+
     font-size: 14px;
-
     letter-spacing: -0.02em;
-
     color: #7C7C7C;
 }
 .info-botones{
@@ -77,17 +77,13 @@ gap: 10px;
 }
 .miBtnVermas button{
     padding: 0px;
-
     width: 93.25px;
     height: 39px;
     border: none;
-
     background: #E03030;
     font-size: 12px;
     line-height: 15px;
-
     letter-spacing: -0.02em;
-
     color: #FFFFFF;
 }
 
@@ -101,16 +97,12 @@ gap: 10px;
 }
 .miBtnCerrar button{
     padding: 0px 5px;
-
     width: 19px;
     height: 39px;
     border: none;
-
     background: #3E3E3E;
     font-size: 12px;
     line-height: 15px;
-
     letter-spacing: -0.02em;
-
     color: #FFFFFF;
 }
