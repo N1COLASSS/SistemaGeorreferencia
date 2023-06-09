@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../fonts/Inter-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('../fonts/Inter-Regular.ttf') format('truetype');
+}
 body{
     margin: 0; /* Margen exterior */
     padding: 0; /* Relleno interno */
-    
-  
-  
+    font-family: 'Inter Regular', sans-serif;
   }
 .informacion{
 
@@ -52,8 +58,6 @@ width: auto;
 height: auto;
 }
 .info-titulo{
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 19px;
@@ -69,16 +73,12 @@ width: auto;
 height: auto;
 }
 .info-subtitulo{
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 15px;
-
     display: flex;
     align-items: center;
     letter-spacing: -0.02em;
-
     color: #7C7C7C;
 }
 .info-botones{
@@ -87,7 +87,6 @@ height: auto;
     align-items: center;
     padding: 0px;
     gap: 10px;
-
     width: auto;
 }
 
@@ -96,26 +95,19 @@ height: auto;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 }
 .miBtnVermas button{
     padding: 0px;
     gap: 10px;
-
     width: 93.25px;
     height: 39px;
     border: none;
-
     background: #E03030;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
-
     text-align: center;
     letter-spacing: -0.02em;
-
     color: #FFFFFF;
 }
 
@@ -124,26 +116,18 @@ height: auto;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 }
-
 .miBtnCerrar button{
     padding: 0px 5px;
     gap: 10px;
-
     width: 19px;
     height: 39px;
     border: none;
-
     background: #3E3E3E;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
-
     text-align: center;
     letter-spacing: -0.02em;
-
     color: #FFFFFF;
 }
