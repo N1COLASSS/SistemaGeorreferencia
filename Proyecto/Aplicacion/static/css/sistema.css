@@ -341,6 +341,7 @@ body{
 }
 .miBoton button:hover{
   background-color: #00B0CA;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 ::placeholder{
   font-family: 'Inter Regular';
@@ -390,7 +391,6 @@ footer {
   height: auto;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  
 }
 .detalle{
   width: 1248px;
@@ -430,6 +430,7 @@ footer {
 }
 .boton-cerrar:hover{
   background-color: #00B0CA;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 .boton-cerrar i {
   font-weight: 700;
@@ -454,9 +455,9 @@ text-align: center;
 letter-spacing: -0.02em;
 color: #FFFFFF;
 }
-
 .boton-anterior:hover{
   background: #00B0CA;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 /* Diseño y ajuste boton anterior */
 .boton-siguiente{
@@ -477,6 +478,7 @@ color: #FFFFFF;
 }
 .boton-siguiente:hover{
   background: #00B0CA;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 /* Diseño casillas */
 .detalle-casilla{
@@ -522,24 +524,31 @@ color: #FFFFFF;
 /* Diseño de hover para cada casilla */
 #casilla1:hover .casilla-fondo {
   background-color: #E03030;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 #casilla2:hover .casilla-fondo {
   background-color: #5675DF;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 #casilla3:hover .casilla-fondo {
   background-color: #1E9731;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 #casilla4:hover .casilla-fondo {
   background-color: #9747FF;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 #casilla5:hover .casilla-fondo {
   background-color: #F423C6;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 #casilla6:hover .casilla-fondo {
   background-color: #FC9A27;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 #casilla7:hover .casilla-fondo {
   background-color: #40ABC2;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 /* Casilla seleccionada */
 #casilla1.casilla-seleccionada .casilla-fondo {
@@ -637,6 +646,7 @@ thead th:nth-child(8) {
 }
 .miBotonExportar button:hover{
   background-color: #00B0CA;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
 }
 .miBotonExportar button{
   font-size: 14px;
@@ -647,4 +657,99 @@ thead th:nth-child(8) {
   width: 100%;
   color: #FFFFFF;
   height: 31px;
+}
+
+/* CSS Informacion */
+.informacion{
+  position: absolute;
+  z-index: 1;
+  width: auto;
+  height: auto;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  left: calc(0% + 15%);
+}
+.barra{
+  padding: 0px;
+  gap: 10px;
+  background-color: #FFFFFF;
+  height: 52px;
+}
+.barra-info{
+  display: flex;
+  align-items: center;
+  padding: 0px 7px 0px 0px;
+  gap: 10px;
+}
+.barra-titulos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0px;
+  width: auto;
+  height: auto;
+}
+.info-titulo{
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: #3E3E3E;
+}
+.info-subtitulo{
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #7C7C7C;
+}
+.info-botones{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px;
+}
+.miBtnVermas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  gap: 10px;
+}
+.miBtnVermas button{
+  padding: 0px;
+  width: 93.25px;
+  height: 39px;
+  border: none;
+  background: #E03030;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+.miBtnVermas button:hover, .miBtnCerrar button:hover{
+  background-color: #00B0CA;
+  transition:  0.2s ease-in-out; /* Agregamos una transición suave */
+}
+.miBtnCerrar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 5px;
+  gap: 10px;
+}
+.miBtnCerrar button{
+  padding: 0px 5px;
+  width: 19px;
+  height: 39px;
+  border: none;
+  background: #3E3E3E;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+.puntos{
+  padding-top: 10px;
+}
+
+.puntos img{
+  cursor: pointer;
+display: none;
 }

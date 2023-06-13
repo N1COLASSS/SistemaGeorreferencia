@@ -227,9 +227,94 @@ function mostrarDatosCasilla(casillaId) {
     detalleCasillaSeleccionada.innerHTML = "";
   }
 }
+
+function accionInformacion() {
+  const botonFiltroCatastro = document.querySelector('#recuadro-catastro #aplicar-filtro');
+  const botonFiltroCBR = document.querySelector('#recuadro-cbr #aplicar-filtro');
+  const botonFiltroMQ = document.querySelector('#recuadro-mq #aplicar-filtro');
+  const botonFiltroMulti = document.querySelector('#recuadro-multi #aplicar-filtro');
+  const botonFiltroPeap = document.querySelector('#recuadro-peap #aplicar-filtro');
+  const botonFiltroSP = document.querySelector('#recuadro-sp #aplicar-filtro');
+  const botonFiltroAdministrado = document.querySelector('#recuadro-administrado #aplicar-filtro');
+  const puntos = document.querySelectorAll('.puntos img');
+  const barras = document.querySelectorAll('.barra');
+
+  // Ocultar los divs "barra" al iniciar la página
+  barras.forEach(barra => {
+    barra.style.display = 'none';
+  });
+
+  puntos.forEach(punto => {
+    punto.addEventListener('click', function() {
+      const puntoId = this.id;
+
+      // Ocultar todos los divs "barra" y mostrar solo el correspondiente al punto clicado
+      barras.forEach(barra => {
+        barra.style.display = 'none';
+      });
+      const barraDiv = document.querySelector(`#${puntoId}-barra`);
+      if (barraDiv) {
+        barraDiv.style.display = 'block';
+      }
+    });
+  });
+
+
+  botonFiltroCatastro.addEventListener('click', function() {
+    // Ocultar todos los puntos y mostrar solo el punto correspondiente
+    puntos.forEach(punto => {
+      punto.style.display = 'none';
+    });
+    document.querySelector('#punto-catastro').style.display = 'block';
+  });
+
+  botonFiltroCBR.addEventListener('click', function() {
+    // Ocultar todos los puntos y mostrar solo el punto correspondiente
+    puntos.forEach(punto => {
+      punto.style.display = 'none';
+    });
+    document.querySelector('#punto-cbr').style.display = 'block';
+  });
+  botonFiltroMQ.addEventListener('click', function() {
+    // Ocultar todos los puntos y mostrar solo el punto correspondiente
+    puntos.forEach(punto => {
+      punto.style.display = 'none';
+    });
+    document.querySelector('#punto-mq').style.display = 'block';
+  });
+  botonFiltroMulti.addEventListener('click', function() {
+    // Ocultar todos los puntos y mostrar solo el punto correspondiente
+    puntos.forEach(punto => {
+      punto.style.display = 'none';
+    });
+    document.querySelector('#punto-multi').style.display = 'block';
+  });
+  botonFiltroPeap.addEventListener('click', function() {
+    // Ocultar todos los puntos y mostrar solo el punto correspondiente
+    puntos.forEach(punto => {
+      punto.style.display = 'none';
+    });
+    document.querySelector('#punto-peap').style.display = 'block';
+  });
+  botonFiltroSP.addEventListener('click', function() {
+    // Ocultar todos los puntos y mostrar solo el punto correspondiente
+    puntos.forEach(punto => {
+      punto.style.display = 'none';
+    });
+    document.querySelector('#punto-sp').style.display = 'block';
+  });
+  botonFiltroAdministrado.addEventListener('click', function() {
+    // Ocultar todos los puntos y mostrar solo el punto correspondiente
+    puntos.forEach(punto => {
+      punto.style.display = 'none';
+    });
+    document.querySelector('#punto-administrado').style.display = 'block';
+  });
+}
+
 function accionResultado() {
   // Obtener referencia al botón de aplicar filtro
-  const botonFiltro = document.querySelector('#aplicar-filtro');
+  const botonFiltro = document.querySelector('.miBtnVermas');
 
   // Obtener referencia al div de resultado
   const resultadoDiv = document.querySelector('.resultado');
@@ -254,4 +339,5 @@ abrirSeleccionador();
 abrirSelect();
 inicializarCasillas();
 mostrarDatosCasilla(casillaId);
+accionInformacion();
 accionResultado();

@@ -605,6 +605,37 @@
                     </div>                                                                                       
                 </div>                   
             </div>
+            <div class="informacion">
+                <div class="barra">
+                    <div class="barra-borde" style="flex-shrink: 0; background-color: rgba(0, 176, 202, 1); width: 9px;"></div>
+                    <div class="barra-info">
+                        <div class="barra-titulos">
+                            <span class="info-titulo">HUERFANOS #234</span>
+                            <div class="barra-subtitulo">
+                                <span class="info-subtitulo">INFORMACION DE: CATASTRO, CBR, PE Y AP, MQ</span>
+                            </div>
+                        </div>
+                        <div class="info-botones">
+                            <div class="miBtnVermas">
+                                <button type="button">Ver Mas</button>
+                            </div>
+                            <div class="miBtnCerrar">
+                                <button type="button">X</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="puntos">
+                    <img id="punto-catastro" src="{% static 'svg/punto-catastro.svg' %}" alt="Ubicacion Catastro" height="47px">
+                    <img id="punto-cbr" src="{% static 'svg/punto-cbr.svg' %}" alt="Ubicacion CBR" height="47px">
+                    <img id="punto-mq" src="{% static 'svg/punto-mq.svg' %}" alt="Ubicacion MQ" height="47px">
+                    <img id="punto-multi" src="{% static 'svg/punto-multi.svg' %}" alt="Ubicacion Multifamily" height="47px">
+                    <img id="punto-peap" src="{% static 'svg/punto-peap.svg' %}" alt="Ubicacion PE y AP" height="47px">
+                    <img id="punto-sp" src="{% static 'svg/punto-sp.svg' %}" alt="Ubicacion Strip y Power Centers" height="47px">
+                    <img id="punto-administrado" src="{% static 'svg/punto-administrado.svg' %}" alt="Ubicacion Administrado MQ" height="47px">
+                </div>           
+            </div>
+            
             <div class="mapa">
                 <img src="{% static 'img/mapa.png' %}" alt="mapaUbicacion">
             </div>
@@ -719,6 +750,7 @@
             </div>
         </div>
     </footer>
+
 
     <script src="{% static 'js/script.js' %}"></script>      
 
