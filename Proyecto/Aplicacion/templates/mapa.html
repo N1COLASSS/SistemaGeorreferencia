@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mapa con Buscador de Calle</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    #map {
+        width: 100%;
+        height: 540px;
+        position: relative;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, Tiles by <a href="https://stamen.com">Stamen Design</a>'
+    }).addTo(map);
+
+    function searchAddress() {
+      var address = document.getElementById('addressInput').value;
+      var url = 'https://nominatim.openstreetmap.org/search?q=' + encodeURIComponent(address) + '&format=json&addressdetails=1&limit=1&countrycodes=CL';
+
+      axios.get(url)
+        .then(function (response) {
+          if (response.data.length > 0) {
+            var result = response.data[0];
+            var lat = parseFloat(result.lat);
+            var lon = parseFloat(result.lon);
+
+            // Crea un marcador personalizado con un icono SVG
+            var customIcon = L.icon({
+              iconUrl: "{% static 'svg/punto-catastro.svg' %}", // Reemplaza con la URL del icono SVG personalizado
+              iconSize: [47, 47], // Tamaño del icono en píxeles
+              iconAnchor: [16, 32] // Punto de anclaje del icono (generalmente la mitad del ancho y la altura)
+            });
+
+            L.marker([lat, lon], { icon: customIcon }).addTo(map);
+            map.setView([lat, lon], 16);
+          } else {
+            alert('Dirección no encontrada');
+          }
+        })
+        .catch(function (error) {
+          console.error(error);
+          alert('Se produjo un error al buscar la dirección');
+        });
+    }
+  </script>
+
+  <div>
+    <input type="text" id="addressInput" placeholder="Ingrese una dirección" />
+    <button onclick="searchAddress()">Buscar</button>
+  </div>
+
+</body>
+</html>
