@@ -333,6 +333,24 @@ function accionResultado() {
   });
 }
 
+function mostrarMapa() {
+  var map = L.map('map').setView([51.505, -0.09], 13);
+
+  // Agrega la capa de mosaico del mapa
+  L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, Tiles by <a href="https://stamen.com">Stamen Design</a>'
+  }).addTo(map);
+
+  // Obtén el contenedor del mapa y el filtro
+  var mapContainer = document.getElementById('map-container');
+  var filtroDiv = document.getElementsByClassName('filtro')[0];
+
+  // Agrega el filtro al contenedor del mapa
+  mapContainer.appendChild(filtroDiv);
+}
+
+
 const casillaId = 1; // Definir el valor de casillaId
 
 abrirSeleccionador();
@@ -341,3 +359,4 @@ inicializarCasillas();
 mostrarDatosCasilla(casillaId);
 accionInformacion();
 accionResultado();
+mostrarMapa();
