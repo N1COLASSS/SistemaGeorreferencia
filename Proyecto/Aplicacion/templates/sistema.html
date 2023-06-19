@@ -24,7 +24,7 @@
                 <span class="subtitulo">Área de Estudios</span>
             </div>
             <div class="imagen">
-                <img src="{% static 'img/logoMQ.png' %}" alt="MQ" width="170px" class="img-fluid">
+                <img src="{% static 'img/logoMQ.png' %}" alt="MQ" width="155px" class="img-fluid">
             </div>
         </div>
     </div>
@@ -33,16 +33,19 @@
             <div class="columna">
                 <!-- Mapa -->
                 <div class="columna-titulo">
-                    <a style="text-decoration: none;">
+                    <div class="texto-filtro">
                         <i class="fas fa-filter fa-xl" style="color: #3E3E3E;"></i>
                         <span class="titulo-filtro">Filtros a considerar:</span>
-                    </a>
+                        <div class="botonColumna">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
                 </div>
                 <!-- Columa de Filtro -->
                 <div class="columna-buscar">
                     <div class="columna-container p-3">
                         <!-- Tabla Catastro -->
-                        <div class="acordeon w-100" >
+                        <div class="acordeon w-100 mt-2" >
                             <div class="frame">
                                 <div class="seleccionador"style="background-color: #E03030;" onclick="abrirRecuadro(this)">
                                     <div class="circulo"></div>                  
@@ -52,11 +55,11 @@
                             </div>    
                             <!-- Contenido del recuadro -->                             
                             <div id="recuadro-catastro" class="recuadro-oculto">                                       
-                                <div class="group-input p-3">
+                                <div class="group-input">
                                     <div class="años">
                                         <label class="label-titulo" for="años">Años</label>
-                                        <select class="miSelect" name="Años" id="años" required>
-                                            <option value="" disabled selected>Selecciona Año</option>
+                                        <select class="miSelect " name="Años" id="años" required>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">2011</option>
                                             <option value="2015">2015</option>
                                             <option value="2018">2018</option>
@@ -68,20 +71,20 @@
                                     <div class="region mt-3">
                                         <label class="label-titulo" for="region">Región</label>
                                         <select class="miSelect" name="Region" id="region" required>
-                                            <option value="" disabled selected>Selecciona Región</option>
-                                            <option value="2011">Region Metropolitana</option>
-                                            <option value="2015">Región de O'Higgins</option>
-                                            <option value="2018">Región del Maule</option>
-                                            <option value="2020">Región de Arica y P.</option>
-                                            <option value="2022">Región de los Lagos</option>
-                                            <option value="2022">Región de los Ríos </option>
+                                            <option value="" disabled selected></option>
+                                            <option value="2011">Metropolitana</option>
+                                            <option value="2015">O'Higgins</option>
+                                            <option value="2018">Maule</option>
+                                            <option value="2020">Arica y P.</option>
+                                            <option value="2022">Los Lagos</option>
+                                            <option value="2022">Los Ríos </option>
                                         </select>
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
                                     <div class="comuna mt-3">
                                         <label class="label-titulo" for="comuna">Comuna</label>
                                         <select class="miSelect" name="Comuna" id="comuna" required>
-                                            <option value="" disabled selected>Selecciona Comuna</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">Santiago</option>
                                             <option value="2015">Ñuñoa</option>
                                             <option value="2018">Providencia</option>
@@ -93,25 +96,25 @@
                                     </div>
                                     <div class="calle mt-3">
                                         <label class="label-titulo" for="calle">Calle</label>
-                                        <input type="text" class="miInput" id="calle" placeholder="Ingresa Calle">
+                                        <input type="text" class="miInput" id="calle" >
                                     </div>
                                     <div class="numero mt-3">
                                         <label class="label-titulo" for="numero">Numero</label>
-                                        <input type="number" id="numero1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="numero1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="numero2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="numero2" class="miInputDoble" >
                                     </div>                                                                                    
                                     <div class="manazana mt-3">
                                         <label class="label-titulo" for="manzana">Manzana</label>
-                                        <input type="number" id="manzana1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="manzana1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="manzana2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="manzana2" class="miInputDoble">
                                     </div>
                                     <div class="predio mt-3">
                                         <label class="label-titulo" for="predio">Predio</label>
-                                        <input type="number" id="predio1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="predio1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="predio2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="predio2" class="miInputDoble">
     
                                     </div>
                                 </div>
@@ -136,7 +139,7 @@
                                     <div class="años">
                                         <label class="label-titulo" for="años">Años</label>
                                         <select class="miSelect" name="Años" id="años" required>
-                                            <option value="" disabled selected>Selecciona Año</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">2011</option>
                                             <option value="2015">2015</option>
                                             <option value="2018">2018</option>
@@ -148,20 +151,20 @@
                                     <div class="region mt-3">
                                         <label class="label-titulo" for="region">Región</label>
                                         <select class="miSelect" name="Region" id="region" required>
-                                            <option value="" disabled selected>Selecciona Región</option>
-                                            <option value="2011">Region Metropolitana</option>
-                                            <option value="2015">Región de O'Higgins</option>
-                                            <option value="2018">Región del Maule</option>
-                                            <option value="2020">Región de Arica y P.</option>
-                                            <option value="2022">Región de los Lagos</option>
-                                            <option value="2022">Región de los Ríos </option>
+                                            <option value="" disabled selected></option>
+                                            <option value="2011">Metropolitana</option>
+                                            <option value="2015">O'Higgins</option>
+                                            <option value="2018">Maule</option>
+                                            <option value="2020">Arica y P.</option>
+                                            <option value="2022">Los Lagos</option>
+                                            <option value="2022">Los Ríos </option>
                                         </select>
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
                                     <div class="comuna mt-3">
                                         <label class="label-titulo" for="años">Comuna</label>
                                         <select class="miSelect" name="Comuna" id="comuna" required>
-                                            <option value="" disabled selected>Selecciona Comuna</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">Santiago</option>
                                             <option value="2015">Ñuñoa</option>
                                             <option value="2018">Providencia</option>
@@ -173,25 +176,25 @@
                                     </div>
                                     <div class="calle mt-3">
                                         <label class="label-titulo" for="calle">Calle</label>
-                                        <input type="text" class="miInput" id="calle" placeholder="Ingresa Calle">
+                                        <input type="text" class="miInput" id="calle">
                                     </div>
                                     <div class="numero mt-3">
                                         <label class="label-titulo" for="numero">Numero</label>
-                                        <input type="number" id="numero1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="numero1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="numero2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="numero2" class="miInputDoble">
                                     </div>                                                                                    
                                     <div class="manazana mt-3">
                                         <label class="label-titulo" for="manzana">Manzana</label>
-                                        <input type="number" id="manzana1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="manzana1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="manzana2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="manzana2" class="miInputDoble">
                                     </div>
                                     <div class="predio mt-3">
                                         <label class="label-titulo" for="predio">Predio</label>
-                                        <input type="number" id="predio1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="predio1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="predio2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="predio2" class="miInputDoble">
     
                                     </div>
                                 </div>
@@ -206,7 +209,7 @@
                             <div class="frame">
                                 <div class="seleccionador" style="background-color: #1E9731;" onclick="abrirRecuadro(this)">
                                     <div class="circulo-peap"></div>                  
-                                    <span class="seleccionador-titulo">PE Y AP (Permiso de Edificación y Anteproyecto)</span>
+                                    <span class="seleccionador-titulo">AP y PE</span>
                                     <i class="fa-solid fa-angle-down"></i>
                                 </div>
                             </div>
@@ -216,7 +219,7 @@
                                     <div class="años">
                                         <label class="label-titulo" for="años">Años</label>
                                         <select class="miSelect" name="Años" id="años" required>
-                                            <option value="" disabled selected>Selecciona Año</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">2011</option>
                                             <option value="2015">2015</option>
                                             <option value="2018">2018</option>
@@ -228,20 +231,20 @@
                                     <div class="region mt-3">
                                         <label class="label-titulo" for="region">Región</label>
                                         <select class="miSelect" name="Region" id="region" required>
-                                            <option value="" disabled selected>Selecciona Región</option>
-                                            <option value="2011">RM</option>
-                                            <option value="2015">Región de O'Higgins</option>
-                                            <option value="2018">Región del Maule</option>
-                                            <option value="2020">Región de Arica y P.</option>
-                                            <option value="2022">Región de los Lagos</option>
-                                            <option value="2022">Región de los Ríos </option>
+                                            <option value="" disabled selected></option>
+                                            <option value="2011">Metropolitana</option>
+                                            <option value="2015">O'Higgins</option>
+                                            <option value="2018">Maule</option>
+                                            <option value="2020">Arica y P.</option>
+                                            <option value="2022">Los Lagos</option>
+                                            <option value="2022">Los Ríos </option>
                                         </select>
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
                                     <div class="comuna mt-3">
                                         <label class="label-titulo" for="años">Comuna</label>
                                         <select class="miSelect" name="Comuna" id="comuna" required>
-                                            <option value="" disabled selected>Selecciona Comuna</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">Santiago</option>
                                             <option value="2015">Ñuñoa</option>
                                             <option value="2018">Providencia</option>
@@ -253,25 +256,25 @@
                                     </div>
                                     <div class="calle mt-3">
                                         <label class="label-titulo" for="calle">Calle</label>
-                                        <input type="text" class="miInput" id="calle" placeholder="Ingresa Calle">
+                                        <input type="text" class="miInput" id="calle">
                                     </div>
                                     <div class="numero mt-3">
                                         <label class="label-titulo" for="numero">Numero</label>
-                                        <input type="number" id="numero1" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="numero1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="numero2" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="numero2" class="miInputDoble">
                                     </div>                                                                                    
                                     <div class="manazana mt-3">
                                         <label class="label-titulo" for="manzana">Manzana</label>
-                                        <input type="number" id="manzana1" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="manzana1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="manzana2" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="manzana2" class="miInputDoble">
                                     </div>
                                     <div class="predio mt-3">
                                         <label class="label-titulo" for="predio">Predio</label>
-                                        <input type="number" id="predio1" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="predio1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="predio2" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="predio2" class="miInputDoble">
     
                                     </div>
                                 </div>
@@ -295,20 +298,21 @@
                                 <div class="group-input p-3">
                                     <div class="años">
                                         <label class="label-titulo" for="años">Años</label>
-                                        <select class="miSelect" name="Años" id="años" required>
-                                            <option value="" disabled selected>Selecciona Año</option>
-                                            <option value="2011">2011</option>
-                                            <option value="2015">2015</option>
-                                            <option value="2018">2018</option>
-                                            <option value="2020">2020</option>
-                                            <option value="2022">2022</option>
+                                        <select class="miSelect" name="Region" id="region" required>
+                                            <option value="" disabled selected></option>
+                                            <option value="2011">Metropolitana</option>
+                                            <option value="2015">O'Higgins</option>
+                                            <option value="2018">Maule</option>
+                                            <option value="2020">Arica y P.</option>
+                                            <option value="2022">Los Lagos</option>
+                                            <option value="2022">Los Ríos </option>
                                         </select>
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
                                     <div class="region mt-3">
                                         <label class="label-titulo" for="region">Región</label>
                                         <select class="miSelect" name="Region" id="region" required>
-                                            <option value="" disabled selected>Selecciona Región</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">Region Metropolitana</option>
                                             <option value="2015">Región de O'Higgins</option>
                                             <option value="2018">Región del Maule</option>
@@ -321,7 +325,7 @@
                                     <div class="comuna mt-3">
                                         <label class="label-titulo" for="años">Comuna</label>
                                         <select class="miSelect" name="Comuna" id="comuna" required>
-                                            <option value="" disabled selected>Selecciona Comuna</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">Santiago</option>
                                             <option value="2015">Ñuñoa</option>
                                             <option value="2018">Providencia</option>
@@ -333,26 +337,26 @@
                                     </div>
                                     <div class="calle mt-3">
                                         <label class="label-titulo" for="calle">Calle</label>
-                                        <input type="text" class="miInput" id="calle" placeholder="Ingresa Calle">
+                                        <input type="text" class="miInput" id="calle">
                                     </div>
                                     <div class="numero mt-3">
                                         <label class="label-titulo" for="numero">Numero</label>
-                                        <input type="number" id="numero1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="numero1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="numero2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="numero2" class="miInputDoble">
                                     </div>                                                                                    
                                     <div class="manazana mt-3">
                                         <label class="label-titulo" for="manzana">Manzana</label>
-                                        <input type="number" id="manzana1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="manzana1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="manzana2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="manzana2" class="miInputDoble">
                                     </div>
                                     <div class="predio mt-3">
                                         <label class="label-titulo" for="predio">Predio</label>
                                         
-                                        <input type="number" id="predio1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="predio1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="predio2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="predio2" class="miInputDoble">
                                     </div>
                                 </div>
                                 <div class="miBoton mt-3">
@@ -376,7 +380,7 @@
                                     <div class="años">
                                         <label class="label-titulo" for="años">Años</label>
                                         <select class="miSelect" name="Años" id="años" required>
-                                            <option value="" disabled selected>Selecciona Año</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">2011</option>
                                             <option value="2015">2015</option>
                                             <option value="2018">2018</option>
@@ -388,20 +392,20 @@
                                     <div class="region mt-3">
                                         <label class="label-titulo" for="region">Región</label>
                                         <select class="miSelect" name="Region" id="region" required>
-                                            <option value="" disabled selected>Selecciona Región</option>
-                                            <option value="2011">RM</option>
-                                            <option value="2015">Región de O'Higgins</option>
-                                            <option value="2018">Región del Maule</option>
-                                            <option value="2020">Región de Arica y P.</option>
-                                            <option value="2022">Región de los Lagos</option>
-                                            <option value="2022">Región de los Ríos </option>
+                                            <option value="" disabled selected></option>
+                                            <option value="2011">Metropolitana</option>
+                                            <option value="2015">O'Higgins</option>
+                                            <option value="2018">Maule</option>
+                                            <option value="2020">Arica y P.</option>
+                                            <option value="2022">Los Lagos</option>
+                                            <option value="2022">Los Ríos </option>
                                         </select>
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
                                     <div class="comuna mt-3">
                                         <label class="label-titulo" for="años">Comuna</label>
                                         <select class="miSelect" name="Comuna" id="comuna" required>
-                                            <option value="" disabled selected>Selecciona Comuna</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">Santiago</option>
                                             <option value="2015">Ñuñoa</option>
                                             <option value="2018">Providencia</option>
@@ -413,25 +417,25 @@
                                     </div>
                                     <div class="calle mt-3">
                                         <label class="label-titulo" for="calle">Calle</label>
-                                        <input type="text" class="miInput" id="calle" placeholder="Ingresa Calle">
+                                        <input type="text" class="miInput" id="calle">
                                     </div>
                                     <div class="numero mt-3">
                                         <label class="label-titulo" for="numero">Numero</label>
-                                        <input type="number" id="numero1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="numero1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="numero2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="numero2" class="miInputDoble">
                                     </div>                                                                                    
                                     <div class="manazana mt-3">
                                         <label class="label-titulo" for="manzana">Manzana</label>
-                                        <input type="number" id="manzana1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="manzana1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="manzana2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="manzana2" class="miInputDoble">
                                     </div>
                                     <div class="predio mt-3">
                                         <label class="label-titulo" for="predio">Predio</label>
-                                        <input type="number" id="predio1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="predio1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="predio2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="predio2" class="miInputDoble">
     
                                     </div>
                                 </div>
@@ -456,7 +460,7 @@
                                     <div class="años">
                                         <label class="label-titulo" for="años">Años</label>
                                         <select class="miSelect" name="Años" id="años" required>
-                                            <option value="" disabled selected>Selecciona Año</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">2011</option>
                                             <option value="2015">2015</option>
                                             <option value="2018">2018</option>
@@ -468,20 +472,20 @@
                                     <div class="region mt-3">
                                         <label class="label-titulo" for="region">Región</label>
                                         <select class="miSelect" name="Region" id="region" required>
-                                            <option value="" disabled selected>Selecciona Región</option>
-                                            <option value="2011">Region Metropolitana</option>
-                                            <option value="2015">Región de O'Higgins</option>
-                                            <option value="2018">Región del Maule</option>
-                                            <option value="2020">Región de Arica y P.</option>
-                                            <option value="2022">Región de los Lagos</option>
-                                            <option value="2022">Región de los Ríos </option>
+                                            <option value="" disabled selected></option>
+                                            <option value="2011">Metropolitana</option>
+                                            <option value="2015">O'Higgins</option>
+                                            <option value="2018">Maule</option>
+                                            <option value="2020">Arica y P.</option>
+                                            <option value="2022">Los Lagos</option>
+                                            <option value="2022">Los Ríos </option>
                                         </select>
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
                                     <div class="comuna mt-3">
                                         <label class="label-titulo" for="años">Comuna</label>
                                         <select class="miSelect" name="Comuna" id="comuna" required>
-                                            <option value="" disabled selected>Selecciona Comuna</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">Santiago</option>
                                             <option value="2015">Ñuñoa</option>
                                             <option value="2018">Providencia</option>
@@ -493,25 +497,25 @@
                                     </div>
                                     <div class="calle mt-3">
                                         <label class="label-titulo" for="calle">Calle</label>
-                                        <input type="text" class="miInput" id="calle" placeholder="Ingresa Calle">
+                                        <input type="text" class="miInput" id="calle">
                                     </div>
                                     <div class="numero mt-3">
                                         <label class="label-titulo" for="numero">Numero</label>
-                                        <input type="number" id="numero1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="numero1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="numero2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="numero2" class="miInputDoble">
                                     </div>                                                                                    
                                     <div class="manazana mt-3">
                                         <label class="label-titulo" for="manzana">Manzana</label>
-                                        <input type="number" id="manzana1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="manzana1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="manzana2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="manzana2" class="miInputDoble">
                                     </div>
                                     <div class="predio mt-3">
                                         <label class="label-titulo" for="predio">Predio</label>
-                                        <input type="number" id="predio1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="predio1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="predio2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="predio2" class="miInputDoble">
     
                                     </div>
                                 </div>
@@ -536,7 +540,7 @@
                                     <div class="años">
                                         <label class="label-titulo" for="años">Años</label>
                                         <select class="miSelect" name="Años" id="años" required>
-                                            <option value="" disabled selected>Selecciona Año</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">2011</option>
                                             <option value="2015">2015</option>
                                             <option value="2018">2018</option>
@@ -548,20 +552,20 @@
                                     <div class="region mt-3">
                                         <label class="label-titulo" for="region">Región</label>
                                         <select class="miSelect" name="Region" id="region" required>
-                                            <option value="" disabled selected>Selecciona Región</option>
-                                            <option value="2011">Region Metropolitana</option>
-                                            <option value="2015">Región de O'Higgins</option>
-                                            <option value="2018">Región del Maule</option>
-                                            <option value="2020">Región de Arica y P.</option>
-                                            <option value="2022">Región de los Lagos</option>
-                                            <option value="2022">Región de los Ríos </option>
+                                            <option value="" disabled selected></option>
+                                            <option value="2011">Metropolitana</option>
+                                            <option value="2015">O'Higgins</option>
+                                            <option value="2018">Maule</option>
+                                            <option value="2020">Arica y P.</option>
+                                            <option value="2022">Los Lagos</option>
+                                            <option value="2022">Los Ríos </option>
                                         </select>
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
                                     <div class="comuna mt-3">
                                         <label class="label-titulo" for="años">Comuna</label>
                                         <select class="miSelect" name="Comuna" id="comuna" required>
-                                            <option value="" disabled selected>Selecciona Comuna</option>
+                                            <option value="" disabled selected></option>
                                             <option value="2011">Santiago</option>
                                             <option value="2015">Ñuñoa</option>
                                             <option value="2018">Providencia</option>
@@ -573,25 +577,25 @@
                                     </div>
                                     <div class="calle mt-3">
                                         <label class="label-titulo" for="calle">Calle</label>
-                                        <input type="text" class="miInput" id="calle" placeholder="Ingresa Calle">
+                                        <input type="text" class="miInput" id="calle">
                                     </div>
                                     <div class="numero mt-3">
                                         <label class="label-titulo" for="numero">Numero</label>
-                                        <input type="number" id="numero1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="numero1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="numero2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="numero2" class="miInputDoble">
                                     </div>                                                                                    
                                     <div class="manazana mt-3">
                                         <label class="label-titulo" for="manzana">Manzana</label>
-                                        <input type="number" id="manzana1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="manzana1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="manzana2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="manzana2" class="miInputDoble">
                                     </div>
                                     <div class="predio mt-3">
                                         <label class="label-titulo" for="predio">Predio</label>
-                                        <input type="number" id="predio1" class="miInputDoble" placeholder="Desde">
+                                        <input type="number" id="predio1" class="miInputDoble">
                                         <span  class="guion">-</span>
-                                        <input type="number" id="predio2" class="miInputDoble" placeholder="Hasta">
+                                        <input type="number" id="predio2" class="miInputDoble">
     
                                     </div>
                                 </div>
@@ -605,25 +609,16 @@
                 </div>                                                                                       
             </div>                   
         </div>
-        <div id="map">
-            
-            <div class="informacion">
+        <div class="informacion">
                 <div class="barra">
                     <div class="barra-borde" style="flex-shrink: 0; background-color: rgba(0, 176, 202, 1); width: 9px;"></div>
                     <div class="barra-info">
                         <div class="barra-titulos">
                             <span class="info-titulo">HUERFANOS #234</span>
-                            <div class="barra-subtitulo">
-                                <span class="info-subtitulo">INFORMACION DE: CATASTRO, CBR, PE Y AP, MQ</span>
-                            </div>
                         </div>
                         <div class="info-botones">
-                            <div class="miBtnVermas">
-                                <button type="button">Ver Mas</button>
-                            </div>
-                            <div class="miBtnCerrar">
-                                <button type="button">X</button>
-                            </div>
+                            <button class="miBtnVermas" type="button">Ver Mas</button>
+                            <button class="miBtnCerrar" type="button">X</button>
                         </div>
                     </div>
                 </div>
@@ -636,7 +631,8 @@
                     <img id="punto-sp" src="{% static 'svg/punto-sp.svg' %}" alt="Ubicacion Strip y Power Centers" height="47px">
                     <img id="punto-administrado" src="{% static 'svg/punto-administrado.svg' %}" alt="Ubicacion Administrado MQ" height="47px">
                 </div>           
-            </div>
+        </div>
+        <div id="map">  
         </div> 
     </div>
            

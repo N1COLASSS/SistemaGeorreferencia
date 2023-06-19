@@ -334,7 +334,7 @@ function accionResultado() {
 }
 
 function mostrarMapa() {
-  var map = L.map('map').setView([51.505, -0.09], 13);
+  var map = L.map('map').setView([-33.4489, -70.6693], 13);;
 
   // Agrega la capa de mosaico del mapa
   L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
@@ -346,17 +346,23 @@ function mostrarMapa() {
   var mapContainer = document.getElementById('map-container');
   var filtroDiv = document.getElementsByClassName('filtro')[0];
 
-  // Agrega el filtro al contenedor del mapa
+  // Agrega la clase "map-container" al contenedor del mapa
+  mapContainer.classList.add('map-container');
+
+  // Mueve el filtro al contenedor del mapa
   mapContainer.appendChild(filtroDiv);
 }
 
 
-const casillaId = 1; // Definir el valor de casillaId
+document.addEventListener('DOMContentLoaded', function() {
+  const casillaId = 1; // Definir el valor de casillaId
 
-abrirSeleccionador();
-abrirSelect();
-inicializarCasillas();
-mostrarDatosCasilla(casillaId);
-accionInformacion();
-accionResultado();
-mostrarMapa();
+  abrirSeleccionador();
+  abrirSelect();
+  inicializarCasillas();
+  mostrarDatosCasilla(casillaId);
+  accionInformacion();
+  accionResultado();
+  mostrarMapa();
+});
+
