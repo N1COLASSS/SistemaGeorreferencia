@@ -1,63 +1,4 @@
-/* Abrir recuadro */
-function abrirRecuadro(element) {
-  var recuadro =  element.parentNode.nextElementSibling;
-  recuadro.classList.toggle("recuadro-oculto");
-}
 
-
-function abrirSeleccionador(){
-  /* Cambio de icono al abrir un seleccionador */
-  const seleccionadores = document.querySelectorAll('.seleccionador');
-
-  // Iterar sobre cada elemento
-  seleccionadores.forEach(seleccionador => {
-    // Agregar un evento de clic a cada elemento
-    seleccionador.addEventListener('click', function() {
-      // Alternar la clase 'active' para cambiar el icono
-      this.classList.toggle('active');
-    });
-
-    // Agregar un evento de cambio a cada elemento (para ocultar el icono si se selecciona una opción)
-    seleccionador.addEventListener('change', function() {
-      this.classList.remove('active');
-    });
-  });
-}
-
-function abrirSelect(){
-  /* Cambio de icono al abrir un select */
-const recuadros = [
-  'recuadro-catastro',
-  'recuadro-cbr',
-  'recuadro-peap',
-  'recuadro-sp',
-  'recuadro-multi',
-  'recuadro-administrado',
-  'recuadro-mq'
-];
-
-const selectores = ['.años', '.region', '.comuna'];
-
-recuadros.forEach(recuadro => {
-  selectores.forEach(selector => {
-    selectDiseño(recuadro, selector);
-  });
-});
-
-function selectDiseño(recuadroID, selector) {
-  const recuadro = document.getElementById(recuadroID);
-  const container = recuadro.querySelector(selector);
-  const select = recuadro.querySelector(selector + ' select');
-
-  container.addEventListener('click', function () {
-    this.classList.toggle('active');
-  });
-
-  select.addEventListener('change', function () {
-    container.classList.remove('active');
-  });
-}
-}
 
 // Utilizar const en lugar de let cuando el valor no va a cambiar
 function inicializarCasillas() {
@@ -228,110 +169,6 @@ function mostrarDatosCasilla(casillaId) {
   }
 }
 
-function accionInformacion() {
-  const botonFiltroCatastro = document.querySelector('#recuadro-catastro #aplicar-filtro');
-  const botonFiltroCBR = document.querySelector('#recuadro-cbr #aplicar-filtro');
-  const botonFiltroMQ = document.querySelector('#recuadro-mq #aplicar-filtro');
-  const botonFiltroMulti = document.querySelector('#recuadro-multi #aplicar-filtro');
-  const botonFiltroPeap = document.querySelector('#recuadro-peap #aplicar-filtro');
-  const botonFiltroSP = document.querySelector('#recuadro-sp #aplicar-filtro');
-  const botonFiltroAdministrado = document.querySelector('#recuadro-administrado #aplicar-filtro');
-  const puntos = document.querySelectorAll('.puntos img');
-  const barras = document.querySelectorAll('.barra');
-
-  // Ocultar los divs "barra" al iniciar la página
-  barras.forEach(barra => {
-    barra.style.display = 'none';
-  });
-
-  puntos.forEach(punto => {
-    punto.addEventListener('click', function() {
-      const puntoId = this.id;
-
-      // Ocultar todos los divs "barra" y mostrar solo el correspondiente al punto clicado
-      barras.forEach(barra => {
-        barra.style.display = 'none';
-      });
-      const barraDiv = document.querySelector(`#${puntoId}-barra`);
-      if (barraDiv) {
-        barraDiv.style.display = 'block';
-      }
-    });
-  });
-
-
-  botonFiltroCatastro.addEventListener('click', function() {
-    // Ocultar todos los puntos y mostrar solo el punto correspondiente
-    puntos.forEach(punto => {
-      punto.style.display = 'none';
-    });
-    document.querySelector('#punto-catastro').style.display = 'block';
-  });
-
-  botonFiltroCBR.addEventListener('click', function() {
-    // Ocultar todos los puntos y mostrar solo el punto correspondiente
-    puntos.forEach(punto => {
-      punto.style.display = 'none';
-    });
-    document.querySelector('#punto-cbr').style.display = 'block';
-  });
-  botonFiltroMQ.addEventListener('click', function() {
-    // Ocultar todos los puntos y mostrar solo el punto correspondiente
-    puntos.forEach(punto => {
-      punto.style.display = 'none';
-    });
-    document.querySelector('#punto-mq').style.display = 'block';
-  });
-  botonFiltroMulti.addEventListener('click', function() {
-    // Ocultar todos los puntos y mostrar solo el punto correspondiente
-    puntos.forEach(punto => {
-      punto.style.display = 'none';
-    });
-    document.querySelector('#punto-multi').style.display = 'block';
-  });
-  botonFiltroPeap.addEventListener('click', function() {
-    // Ocultar todos los puntos y mostrar solo el punto correspondiente
-    puntos.forEach(punto => {
-      punto.style.display = 'none';
-    });
-    document.querySelector('#punto-peap').style.display = 'block';
-  });
-  botonFiltroSP.addEventListener('click', function() {
-    // Ocultar todos los puntos y mostrar solo el punto correspondiente
-    puntos.forEach(punto => {
-      punto.style.display = 'none';
-    });
-    document.querySelector('#punto-sp').style.display = 'block';
-  });
-  botonFiltroAdministrado.addEventListener('click', function() {
-    // Ocultar todos los puntos y mostrar solo el punto correspondiente
-    puntos.forEach(punto => {
-      punto.style.display = 'none';
-    });
-    document.querySelector('#punto-administrado').style.display = 'block';
-  });
-}
-
-function accionResultado() {
-  // Obtener referencia al botón de aplicar filtro
-  const botonFiltro = document.querySelector('.miBtnVermas');
-
-  // Obtener referencia al div de resultado
-  const resultadoDiv = document.querySelector('.resultado');
-
-  // Agregar evento de clic al botón de aplicar filtro
-  botonFiltro.addEventListener('click', function() {
-    resultadoDiv.style.display = 'block';
-  });
-
-  // Obtener referencia al botón de cerrar
-  const cerrarBtn = document.querySelector('.boton-cerrar');
-
-  // Agregar evento de clic al botón de cerrar
-  cerrarBtn.addEventListener('click', function() {
-    resultadoDiv.style.display = 'none';
-  });
-}
 
 function mostrarMapa() {
   var map = L.map('map').setView([-33.4489, -70.6693], 13);;
@@ -361,8 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
   abrirSelect();
   inicializarCasillas();
   mostrarDatosCasilla(casillaId);
-  accionInformacion();
-  accionResultado();
   mostrarMapa();
+  abrirSelect();
 });
 
